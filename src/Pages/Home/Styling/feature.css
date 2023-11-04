@@ -1,0 +1,31 @@
+.image-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .image-container img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: grab;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .image-container img:active {
+    cursor: grabbing;
+  }
+
+  /* Optional styles for better visual feedback during dragging */
+  .image-container img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-container img:active {
+    transform: scale(1.2);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
